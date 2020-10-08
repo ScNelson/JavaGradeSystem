@@ -20,12 +20,12 @@ public class Java_TenPtGrade_HW {
         try {
             gradeInt = Integer.parseInt(gradeStr);
         } catch (final NumberFormatException e) {
-            gradeInt = -1;
+            gradeInt = -110; // If cannot be parsed, set equal to -10
         }
         
-        /*
         // If statement method for determining grade letter
-        if (gradeInt != -1) {
+        /*
+        if (gradeInt != -110) {
             if (gradeInt >= 90 && gradeInt <= 100) {
                 System.out.println("Your grade is an A");
             } else if (gradeInt >= 80 && gradeInt <= 89) {
@@ -45,6 +45,12 @@ public class Java_TenPtGrade_HW {
         */
 
         // Switch statement for calculating grade letter
+        /* 
+            Switch statements allow for cleaner, more straightforward code.
+            Rather than a series of messy stacked if statements (each with
+            its own condition), a switch statement allows for one condition
+            to be analyzed using a series of single cases.
+        */
         switch(gradeInt / 10) {
             case 10:
                 System.out.println("Your grade is an A");
@@ -60,6 +66,9 @@ public class Java_TenPtGrade_HW {
                 break;
             case 6:
                 System.out.println("Your grade is an D");
+                break;
+            case -11:
+                System.out.println("Your grade is invalid!");
                 break;
             default:
                 System.out.println("Your grade is an F");
