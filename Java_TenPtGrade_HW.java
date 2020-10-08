@@ -16,6 +16,7 @@ public class Java_TenPtGrade_HW {
 
         int gradeInt = 0;
 
+        // Make sure that the user input can be parsed to an Integer
         try {
             gradeInt = Integer.parseInt(gradeStr);
         } catch (final NumberFormatException e) {
@@ -43,6 +44,7 @@ public class Java_TenPtGrade_HW {
         }
         */
 
+        // Switch statement for calculating grade letter
         switch(gradeInt / 10) {
             case 10:
                 System.out.println("Your grade is an A");
@@ -64,6 +66,7 @@ public class Java_TenPtGrade_HW {
                 break;
         }
 
+        // Nested if statements to add an extra message if the student is doing well in a specific subject
         if (gradeInt >= 90) {
             String scienceStr = "science";
             String mathStr = "math";
